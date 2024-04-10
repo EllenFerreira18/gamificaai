@@ -206,6 +206,8 @@ h2 {
     background-repeat: repeat;
 
     background-attachment: fixed;
+
+    position: relative;
 }
 
 .filtro {
@@ -213,12 +215,34 @@ h2 {
     width: 100%;
 
     background-color: #47208bc2;
+
+    position: absolute;
+    top: 0;
+
+
+}
+
+#portfolio .container-grid {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 #portfolio a {
+    width: fit-content;
+    
     font-family: 'Anta';
     font-size: 28px;
 
     color: white;
 
+    z-index: 1;
+
+}
+
+#portfolio a:hover {
+    transform: scale(1.05);
 }
