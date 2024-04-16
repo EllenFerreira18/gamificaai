@@ -99,9 +99,6 @@ header img {
         digitando 2s steps(40, end),
         cursor 0.75s step-end infinite
         ;
-
-
-
 }
 
 @keyframes digitando{
