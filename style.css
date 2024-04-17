@@ -25,16 +25,16 @@ html {
     margin: 0 auto;
 }
 
-.banner{
+.banner {
     height: 100vh;
 
-    background-image: linear-gradient(90deg, rgba(53, 24, 104, 1) 0%, rgba(53, 24, 104, 0.8) 100%),url(img/bg-room.png);
+    background-image: linear-gradient(90deg, rgba(53, 24, 104, 1) 0%, rgba(53, 24, 104, 0.8) 100%), url(img/bg-room.png);
     background-repeat: no-repeat;
 
     background-position: 165% 40%;
 }
 
-header{
+header {
     height: 165px;
 }
 
@@ -65,7 +65,7 @@ header button {
 
     font-family: 'Anta';
     font-size: 20px;
-    
+
 
     text-decoration: underline transparent;
     text-decoration-thickness: 2px;
@@ -99,13 +99,12 @@ header button {
     border-right: 6px solid var(--laranja-gamifica);
     white-space: nowrap;
 
-    animation: 
+    animation:
         digitando 2s steps(40, end),
-        cursor 0.75s step-end infinite
-        ;
+        cursor 0.75s step-end infinite;
 }
 
-@keyframes digitando{
+@keyframes digitando {
     from {
         width: 0
     }
@@ -116,6 +115,7 @@ header button {
 }
 
 @keyframes cursor {
+
     from,
     to {
         border-color: transparent;
@@ -125,6 +125,7 @@ header button {
         border-color: var(--laranja-gamifica);
     }
 }
+
 #sobre {
     height: 800px;
 
@@ -182,7 +183,7 @@ h2 {
 
     border-radius: 4px;
 
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5 );
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .card img {
@@ -262,7 +263,7 @@ h2 {
 
 #portfolio a {
     width: fit-content;
-    
+
     font-family: 'Anta';
     font-size: 28px;
 
@@ -367,7 +368,8 @@ h2 {
     resize: none;
 }
 
-.campo input:focus, .campo-textarea textarea:focus {
+.campo input:focus,
+.campo-textarea textarea:focus {
     outline: 2px solid var(--laranja-gamifica);
 }
 
@@ -398,7 +400,7 @@ h2 {
     background-color: #ad4929;
 }
 
-#contato form input::placeholder, 
+#contato form input::placeholder,
 #contato form textarea::placeholder {
     color: #b9b9b9;
 }
@@ -456,10 +458,10 @@ footer .container-grid {
         width: 50px;
 
         display: unset;
-        
+
         background: none;
         border: none;
-        
+
     }
 
     header svg {
@@ -535,4 +537,143 @@ footer .container-grid {
     .redes-sociais {
         align-items: center;
     }
+}
+
+@media screen and (max-width: 800px) {
+    .card {
+        flex-basis: 45%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #sobre {
+        height: unset;
+        margin-bottom: 40px;
+    }
+
+    #sobre h2 {
+        margin-bottom: 50px;
+    }
+
+    #sobre p {
+        margin-bottom: 30px;
+    }
+
+    #cases,
+    #contato {
+        margin-bottom: unset;
+    }
+
+    #portfolio a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .campo,
+    .campo-textarea,
+    #contato form button {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container-grid {
+        width: 90%;
+    }
+
+    header img {
+        width: 200px;
+    }
+
+    .banner {
+        background-size: cover;
+    }
+
+    .conteudo-banner p {
+        font-size: 24px;
+    }
+
+    nav.menu {
+        width: 100%;
+
+        display: none;
+    }
+
+    #sobre {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #sobre p {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    #cases {
+        width: 100%;
+        margin: unset;
+    }
+
+    .container-cards {
+        flex-wrap: nowrap;
+
+        gap: 40px;
+
+        overflow: auto;
+    }
+
+    .card {
+        height: 400px;
+        width: 280px;
+
+        flex-basis: unset;
+    }
+
+    .card:first-child {
+        margin-left: 30px;
+    }
+    
+    .card:last-child{
+        margin-right: 30px;
+    }
+
+    #portfolio {
+        margin-bottom: 0;
+    }
+
+    #contato {
+        padding-top: 70px;
+
+        background-color: var(--roxo-gamifica);
+        color: white;
+    }
+
+    #contato h2 {
+        margin-bottom: 0px;
+    }
+
+    #contato form {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header img {
+        width: 160px;
+    }
+
+    header svg {
+        width: 40px;
+    }
+    
+    .conteudo-banner p {
+        font-size: 20px;
+    }
+
+    footer img {
+        width: 200px;
+    }
+    
 }
